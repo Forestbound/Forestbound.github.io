@@ -5,27 +5,66 @@
 }
 
 body {
+	margin: 5% 25%;
 	font-size: 100%;
 	font-family: sans-serif;
-	margin: 5% 25% 0;
+	color: #848484;
+}
+
+header {
+	margin-bottom: 40px;
+	padding: 20px;
+	height: 240px;
+	border-bottom: 2px solid grey;
+}
+
+.photo {
+	margin-right: 20px;
+	display: inline-block;
 }
 
 img {
-	margin-right: 20px;
-	width: 200px;
-	border-radius: 3%;
-	float: left;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.about {
+	display: inline-block;
+	vertical-align: top;
+}
+
+h1 {
+	margin-bottom: 10px;
+	color: #585858;
 }
 
 ul {
 	list-style: none;
-	line-height: 1.7;
+	line-height: 2;
+	color: #848484;
+}
+
+a {
+	text-decoration: none;
+	color: #585858;
+}
+
+main {
+	/*background-color: red;*/
 }
 
 h2 {
-	margin: 20px 0;
+	margin-bottom: 20px;
+	text-align: center;
+	color: #585858;
 }
 
 p {
-	margin: 0 0 20px 20px;
+	line-height: 1.5;
+}
+
+hr {
+	margin: 40px 25%;
+	width: 50%;
+	vertical-align: center;
 }
