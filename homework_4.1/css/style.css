@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 100%;
+	padding: 40px 20px;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 680px;
+}
+
+header {
+	margin-bottom: 20px;
+	text-align: center;
+	background-color: crimson;
+}
+
+h1 {
+	color: white;
+}
+
+.sunset {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.blue {
+	color: blue;
+}
+
+ul {
+	margin-bottom: 20px;
+	list-style: none;
+	text-align: center;
+}
+
+li {
+	display: inline-block;
+}
+
+.car {
+	border: 3px dashed black;
+}
+
+footer {
+	margin-top: 40px;
+	text-align: center;
+	color: white;
+	background-color: black;
+}
+
+.copyright {
+	font-size: 1.2em;
+}
