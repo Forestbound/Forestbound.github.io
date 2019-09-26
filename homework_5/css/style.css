@@ -15,6 +15,7 @@ body {
 
 .footer {
 	padding: 120px 0 38px;
+	color: white;
 	text-align: center;
 	background-color: #121116;
 }
@@ -36,7 +37,6 @@ body {
 
 .container__social {
 	margin-bottom: 60px;
-	color: white;
 	text-transform: uppercase;
 }
 
@@ -90,7 +90,6 @@ body {
 }
 
 .container__copyright {
-	color: white;
 	font-size: 15px;
 }
 
