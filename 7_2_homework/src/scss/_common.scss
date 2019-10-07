@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {height: 100%}
+
+body {
+	font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
+	font-size: 100%;
+}
+
+.container {
+	width: 700px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.capitalize {text-transform: capitalize}
+
+.lisbon {background-color: $lisbon}
+.paris {background-color: $paris}
+.belgrade {background-color: $belgrade}
+.moscow {background-color: $moscow}
+.tel-aviv {background-color: $tel-aviv}
+.cair {background-color: $cair}
+.new-york {background-color: $new-york}
+.new-delphi {background-color: $new-delphi}
+.san-francisco {background-color: $san-francisco}
+.tokyo {background-color: $tokyo}
+.sydney {background-color: $sydney}
+
+.fourth {width: $fourth}
+.half {width: $half}
+.full {width: $full}
+
+.weather {
+	height: inherit;
+	padding: 5% 0;
+	color: $text;
+	border: 20px solid $section-border;
+	background-color: $section-background;
+	transition: all .1s ease-in;
+
+	&__title {
+		font-weight: 450;
+		margin-bottom: 20px;
+	}
+
+	&__list {
+		margin-bottom: 20px;
+		list-style: none;
+		font-size: 0;
+		text-align: center;
+		border: 2px solid white;
+	}
+
+	&__list:hover .weather__list-item {opacity: .5}
+
+	&__list .weather__list-item:hover {opacity: 1}
+
+	&__list-item {
+		display: inline-block;
+		padding: 20px 0;
+		font-size: 1rem;
+		border: 2px solid white;
+	}
+
+	&__list-item .city {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	&__list-item .temp {
+		opacity: .7;
+	}
+
+	&__list-item  .wi {
+		font-size: 1.5rem;
+	}
+
+}
