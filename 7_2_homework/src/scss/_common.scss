@@ -3,19 +3,16 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 html, body {height: 100%}
-
 body {
-	font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
 	font-size: 100%;
+	font-family: “Lucida Sans Unicode”, “Lucida Grande”, sans-serif;
 }
 
 .container {
-	width: 700px;
-	max-width: 100%;
+	width: 100%;
+	max-width: 700px;
 	margin: 0 auto;
-	padding: 0 15px;
 }
 
 .capitalize {text-transform: capitalize}
@@ -38,47 +35,55 @@ body {
 
 .weather {
 	height: inherit;
-	padding: 5% 0;
-	color: $text;
+	padding-top: 50px;
 	border: 20px solid $section-border;
 	background-color: $section-background;
-	transition: all .1s ease-in;
-
 	&__title {
+		color: $text;
 		font-weight: 450;
 		margin-bottom: 20px;
 	}
-
 	&__list {
 		margin-bottom: 20px;
-		list-style: none;
 		font-size: 0;
+		list-style: none;
 		text-align: center;
-		border: 2px solid white;
+		border: 1px solid white;
 	}
-
-	&__list:hover .weather__list-item {opacity: .5}
-
+	&__list:hover .weather__list-item {
+		opacity: .5;
+		transition: all 0.1s ease-in;
+	}
 	&__list .weather__list-item:hover {opacity: 1}
-
 	&__list-item {
 		display: inline-block;
-		padding: 20px 0;
-		font-size: 1rem;
-		border: 2px solid white;
 	}
-
+	&__list-link {
+		display: block;
+		padding: 20px 0;
+		text-decoration: none;
+		color: $text;
+		font-size: 0;
+		border: 1px solid white;
+	}
 	&__list-item .city {
 		display: block;
+		font-size: 1rem;
 		margin-bottom: 10px;
 	}
-
 	&__list-item .temp {
+		font-size: 1rem;
 		opacity: .7;
 	}
-
 	&__list-item  .wi {
 		font-size: 1.5rem;
 	}
+	&__message {
+		color: $text;
+	}
+}
 
+.city-link {
+	text-decoration: none;
+	color: darkseagreen;
 }

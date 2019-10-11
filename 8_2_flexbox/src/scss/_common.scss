@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {min-height: 100%}
+
+body {
+	font-family: "Avenir Next", sans-serif;
+	font-size: 100%;
+	background-color: $body-background;
+}
+
+.container {
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 90px 40px;
+}
+
+.uppercase {text-transform: uppercase}
+
+.content {
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		height: 1110px;
+		list-style: none;
+	}
+
+	&__list-item {}
+
+	&__link {
+		display: flex;
+		flex-wrap: wrap;
+		text-decoration: none;
+		width: 360px;
+		background-color: $link-background;
+	}
+
+	&__link-image {font-size: 0}
+
+	&__link-description {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 25px;
+	}
+
+	&__link-date {
+		color: $link-date;
+		font-size: 13px;
+		margin-bottom: 15px;
+	}
+
+	&__link-title {
+		color: $link-title;
+		font-size: 22px;
+		font-weight: 450;
+		margin-bottom: 62px;
+	}
+
+	&__link-icon {border-radius: 50%}
+}
