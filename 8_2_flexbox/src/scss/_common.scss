@@ -3,9 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-
 html, body {min-height: 100%}
-
 body {
 	font-family: "Avenir Next", sans-serif;
 	font-size: 100%;
@@ -25,44 +23,74 @@ body {
 
 	&__list {
 		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-content: space-between;
-		height: 1110px;
+		align-items: flex-start;
+		height: 1500px;
 		list-style: none;
 	}
-
 	&__list-item {}
-
-	&__link {
+	&__first_link {
 		display: flex;
-		flex-wrap: wrap;
+		align-items: flex-end;
+		padding: 40px;
+		width:740px;
+		height: 540px;
+		font-size: 0;
 		text-decoration: none;
-		width: 360px;
-		background-color: $link-background;
+		background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.7) 75%, rgba(0,0,0,1) 100%), url(../img/layer_5.jpg) no-repeat;
 	}
-
-	&__link-image {font-size: 0}
-
-	&__link-description {
+	&__first_link-description {
 		display: flex;
-		flex-wrap: wrap;
-		padding: 25px;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 450px;
+		height: 110px;
 	}
-
-	&__link-date {
+	&__first_link-date {
 		color: $link-date;
 		font-size: 13px;
-		margin-bottom: 15px;
+	}
+	&__first_link-title {
+		font-size: 30px;
+		color: $link-h2;
+		font-weight: 400;
 	}
 
-	&__link-title {
-		color: $link-title;
-		font-size: 22px;
-		font-weight: 450;
-		margin-bottom: 62px;
-	}
 
-	&__link-icon {border-radius: 50%}
+	// &__link {
+	// 	width: 360px;
+	// 	// background-color: $link-background;
+	// 	text-decoration: none;
+	// 	// display: flex;
+	// 	// flex-wrap: wrap;
+	// }
+
+	// &__link-image {font-size: 0}
+
+	// &__link-description {
+	// 	display: flex;
+	// 	flex-wrap: wrap;
+	// 	padding: 25px;
+	// }
+
+	// &__link-title {
+	// 	color: $link-title;
+	// 	font-size: 22px;
+	// 	font-weight: 450;
+	// 	margin-bottom: 62px;
+	// }
+
+	// &__link-icon {border-radius: 50%}
 }
+
+
+
+
+
+
+
+
+
+
+// Разделить в Первой Карточке картинку и градиент
+// Сделать так, чтобы при наведении карточки плавно поднимались
+// Добавить тень к карточкам, чтобы получился Material Design
