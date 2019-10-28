@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {min-height: 100%}
+body {
+	display: flex;
+	font: 100% sans-serif;
+}
+
+.t-upper {text-transform: uppercase}
+.capitalize {text-transform: capitalize}
+.italic {font-style: italic}
+
+.page {
+	display: flex;
+	width: 100%;
+}
+
+.flex-container {
+	position: relative;
+	display: inherit;
+	flex-flow: column nowrap;
+	height: 900px; flex: 0 1 100%;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: $page-background;
+}
+
+.paper {
+	position: relative;
+	display: inherit;
+	flex-flow: inherit;
+	flex: 0 1 751px; width: 1060px;
+	padding: 200px 110px 34px 121px;
+	justify-content: space-around;
+	text-align: justify;
+	background-color: $white;
+	box-shadow: 0 0 20px 5px rgba(0,0,0,.5);
+	z-index: 1;
+	&__border {
+		position: absolute;
+		top: 0; left: 67px;
+		height: 100%; width: 2px;
+		background-color: $paper-border;
+	}
+	&__published {
+		font: 300 20px proxima-nova;
+		letter-spacing: 5px;
+		color: $paper-published;
+	}
+	&__header {
+		display: inherit;
+		flex-flow: inherit;
+	}
+	&__header-title {
+		font: 600 77px Futura;
+		color: $paper-header-title;
+	}
+	&__header-description {
+		font: italic 30px Georgia;
+		letter-spacing: .8px;
+		color: $paper-header-description;
+	}
+	&__paragraph {
+		font: 26px Georgia;
+		word-spacing: 3px;
+		color: $black;
+	}
+}
+
+.redactor-main {
+	position: absolute;
+	top: 47px; right: 120px;
+	flex: 0 1 187px; width: 876px;
+	padding: 48px 0 50px 60px;
+	background-color: $redactor-main-background;
+	z-index: 2;
+	&__overhead {
+		font: 500 15px proxima-nova;
+		letter-spacing: 5px;
+		color: $redactor-main-overhead;
+	}
+	&__title {
+		font: 500 48px "Playfair Display";
+		margin-bottom: 10px;
+		color: $redactor-main-title;
+	}
+	&__title::after {
+		content: "";
+		display: inline-block;
+		height: 43px; width: 2px;
+		margin-left: 5px;
+		background-color: $redactor-main-title-pointer;
+	}
+}
+.redactor-main::after {
+	content: "";
+	display: block;
+	height: 3px; width: 100%;
+	background-color: $redactor-main-border;
+}
+
+.redactor-secondary {
+	position: absolute;
+	top: 240px; right: 120px;
+	display: inherit;
+	flex: 0 1 76px; width: 812px;
+	padding: 20px 0 20px 40px;
+	background-color: $redactor-secondary-background;
+	z-index: 2;
+	&__wrapper {
+		display: inherit;
+		flex: 0 1 550px;
+		justify-content: space-between;
+	}
+	&__link {font-size: 0}
+	&__link i.fas {
+		font-size: 26px;
+		color: $redactor-secondary-icon;
+		transition: all .1s ease-in;
+	}
+	&__link i.fas:hover {color: $redactor-secondary-icon-hover}
+}
