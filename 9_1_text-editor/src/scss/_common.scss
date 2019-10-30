@@ -22,10 +22,12 @@ body {
 	position: relative;
 	display: inherit;
 	flex-flow: column nowrap;
-	height: 900px; flex: 0 1 100%;
+	height: 100vh; flex: 0 1 100%;
 	justify-content: flex-end;
 	align-items: center;
 	background-color: $page-background;
+
+	padding-bottom: 5rem;
 }
 
 .paper {
@@ -72,9 +74,8 @@ body {
 
 .redactor-main {
 	position: absolute;
-	top: 47px; right: 120px;
-	flex: 0 1 187px; width: 876px;
-	padding: 48px 0 50px 60px;
+	top: 5rem; right: 5rem;
+	padding: 48px 361px 50px 60px;
 	background-color: $redactor-main-background;
 	z-index: 2;
 	&__overhead {
@@ -104,19 +105,21 @@ body {
 
 .redactor-secondary {
 	position: absolute;
-	top: 240px; right: 120px;
-	display: inherit;
-	flex: 0 1 76px; width: 812px;
-	padding: 20px 0 20px 40px;
+	top: 17rem; right: 5rem;
+	padding: 20px 200px 20px 40px;
 	background-color: $redactor-secondary-background;
 	z-index: 2;
 	&__wrapper {
-		display: inherit;
-		flex: 0 1 550px;
 		justify-content: space-between;
+		list-style: none;
+	}
+	&__item {
+		display: inline-block;
+		margin-right: 30px;
 	}
 	&__link {font-size: 0}
 	&__link i.fas {
+		height: 30px; width: 30px;
 		font-size: 26px;
 		color: $redactor-secondary-icon;
 		transition: all .1s ease-in;
