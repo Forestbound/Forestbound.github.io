@@ -4,10 +4,7 @@
 	box-sizing: border-box;
 }
 html, body {min-height: 100%}
-body {
-	display: flex;
-	font: 100% sans-serif;
-}
+body {font: 100% sans-serif}
 
 .t-upper {text-transform: uppercase}
 .capitalize {text-transform: capitalize}
@@ -22,7 +19,8 @@ body {
 	position: relative;
 	display: inherit;
 	flex-flow: column nowrap;
-	height: 100vh; flex: 0 1 100%;
+	height: 100vh;
+	flex: 0 1 100%;
 	justify-content: flex-end;
 	align-items: center;
 	background-color: $page-background;
@@ -32,9 +30,11 @@ body {
 	position: relative;
 	display: inherit;
 	flex-flow: inherit;
-	flex: 0 1 751px; width: 1060px;
+	flex: 0 1 751px;
+	width: 1060px;
 	padding: 200px 110px 34px 121px;
 	justify-content: space-around;
+	align-items: flex-start;
 	text-align: justify;
 	background-color: $white;
 	box-shadow: 0 0 20px 5px rgba(0,0,0,.5);
@@ -53,12 +53,13 @@ body {
 	&__header {
 		display: inherit;
 		flex-flow: inherit;
+		align-items: flex-start;
 	}
 	&__header-title {
 		font: 600 77px Futura;
 		color: $paper-header-title;
 	}
-	&__header-description {
+	&__header-subtitle {
 		font: italic 30px Georgia;
 		letter-spacing: .8px;
 		color: $paper-header-description;
@@ -73,9 +74,15 @@ body {
 .redactor-main {
 	position: absolute;
 	top: 3rem; right: 5rem;
-	padding: 48px 361px 50px 60px;
+	padding: 48px 0 50px 60px;
 	background-color: $redactor-main-background;
 	z-index: 2;
+	&__wrapper {
+		display: flex;
+		flex-flow: column nowrap;
+		width: 756px;
+		align-items: flex-start;
+	}
 	&__overhead {
 		font: 500 15px proxima-nova;
 		letter-spacing: 5px;
@@ -104,18 +111,22 @@ body {
 .redactor-secondary {
 	position: absolute;
 	top: 15rem; right: 5rem;
-	padding: 20px 200px 20px 40px;
+	padding: 20px 0 20px 40px;
 	background-color: $redactor-secondary-background;
 	z-index: 2;
-	&__wrapper {
-		justify-content: space-between;
+	&__list {
+		width: 776px;
 		list-style: none;
 	}
 	&__item {
 		display: inline-block;
-		margin-right: 30px;
+		margin-right: 20px;
 	}
-	&__link {font-size: 0}
+	&__item:last-child {margin-right: 0}
+	&__link {
+		display: inherit;
+		font-size: 0;
+}
 	&__link i.fas {
 		height: 30px; width: 30px;
 		font-size: 26px;
