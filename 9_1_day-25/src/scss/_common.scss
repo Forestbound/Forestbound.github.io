@@ -10,17 +10,12 @@ body {font: 100% sans-serif}
 .capitalize {text-transform: capitalize}
 .italic {font-style: italic}
 
-.page {
-	display: flex;
-	width: 100%;
-}
-
 .flex-container {
 	position: relative;
-	display: inherit;
+	display: flex;
 	flex-flow: column nowrap;
 	height: 100vh;
-	flex: 0 1 100%;
+	width: 100%;
 	justify-content: flex-end;
 	align-items: center;
 	background-color: $page-background;
@@ -32,6 +27,7 @@ body {font: 100% sans-serif}
 	flex-flow: inherit;
 	flex: 0 1 751px;
 	width: 1060px;
+	max-width: 100%;
 	padding: 200px 110px 34px 121px;
 	justify-content: space-around;
 	align-items: flex-start;
@@ -39,12 +35,6 @@ body {font: 100% sans-serif}
 	background-color: $white;
 	box-shadow: 0 0 20px 5px rgba(0,0,0,.5);
 	z-index: 1;
-	&__border {
-		position: absolute;
-		top: 0; left: 67px;
-		height: 100%; width: 2px;
-		background-color: $paper-border;
-	}
 	&__published {
 		font: 300 20px proxima-nova;
 		letter-spacing: 5px;
@@ -70,6 +60,16 @@ body {font: 100% sans-serif}
 		color: $black;
 	}
 }
+.paper::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 67px;
+	display: block;
+	height: 100%;
+	width: 2px;
+	background-color: $paper-border;
+}
 
 .redactor-main {
 	position: absolute;
@@ -81,6 +81,7 @@ body {font: 100% sans-serif}
 		display: flex;
 		flex-flow: column nowrap;
 		width: 756px;
+		max-width: 100%;
 		align-items: flex-start;
 	}
 	&__overhead {
@@ -116,6 +117,7 @@ body {font: 100% sans-serif}
 	z-index: 2;
 	&__list {
 		width: 776px;
+		max-width: 100%;
 		list-style: none;
 	}
 	&__item {
