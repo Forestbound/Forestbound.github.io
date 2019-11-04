@@ -1,0 +1,30 @@
+// Fonts
+@import url("https://use.typekit.net/wwq6goc.css"); // Adobe
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'); // Google
+
+$small-font: proxima-nova; // Adobe
+$title-editor-title-font: "Playfair Display"; // Google
+
+$title-font: Futura; // Local
+$main-font: Georgia; // Local
+
+
+// Colors
+$white: #fff;
+$black: #000;
+
+$paper-published-color: #b4b4b4;
+$paper-title-color: #2a2a2a;
+$paper-subtitle-color: #8f8f8f;
+$title-editor-overheading-color: #767676;
+$title-editor-title-color: #fefefe;
+$markup-editor-icon: #f9dc94;
+$markup-editor-icon-hover: #fdfdfd;
+
+$flex-container-bg: #464f54;
+$title-editor-bg: #181818;
+$markup-editor-bg: #fbc02d;
+
+$paper-decorative-border-color: #e8eced;
+$title-editor-decorative-border: #303030;
+$title-editor-title-pointer: #afb1b3;
