@@ -1,0 +1,37 @@
+//Fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap'); // Google
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap'); // Google
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap'); // Google
+
+$main-font: 'Poppins', sans-serif;
+$secondary-font: 'Libre Baskerville', serif;
+$sign-font: 'Sacramento', cursive;
+
+// Colors
+$white: #fff;
+$black: #000;
+
+$text-color: #616161;
+$orange: #fc5f45;
+$orange-logo: $orange;
+
+$white-bg: $white;
+$grey-bg: #f7f7f7;
+$dark-bg: #3f4049;
+
+// $bg-header: #3f4049;
+// $menu-color: #272727;
+// $cyan-text: #38c695;
+// $violet-text: #8b66bd;
+// $orange-text: #feb960;
+// $pink-text: #d9aca5;
+// $yellow-text: #feb960;
+// $bg-text: #f6f6f6;
+// $gradient-start-color: #cccccc;
+// $pink-text: #d9aca5;
+// $section-grey-text: #616161;
+// $even-section-bg: #f7f7f7;
+// $section-title: #313131;
+// $work-steps-nums: #e0e0e0;
+
+$transition: all .3s ease;

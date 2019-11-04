@@ -26,8 +26,8 @@ body {font: 100% sans-serif}
 	display: inherit;
 	flex-flow: inherit;
 	flex: 0 1 751px;
-	width: 1060px;
-	max-width: 100%;
+	width: 1060px; // Поменять месами с max-width
+	max-width: 100%; // Поменять местами с width
 	padding: 200px 110px 34px 121px;
 	justify-content: space-around;
 	align-items: flex-start;
@@ -60,7 +60,7 @@ body {font: 100% sans-serif}
 		color: $black;
 	}
 }
-.paper::before {
+.paper::before { // Написать сокращённо
 	content: "";
 	position: absolute;
 	top: 0;
@@ -80,8 +80,8 @@ body {font: 100% sans-serif}
 	&__wrapper {
 		display: flex;
 		flex-flow: column nowrap;
-		width: 756px;
-		max-width: 100%;
+		width: 756px; // Поменять местами с max-width
+		max-width: 100%; // Поменять местами с width
 		align-items: flex-start;
 	}
 	&__overhead {
@@ -94,7 +94,7 @@ body {font: 100% sans-serif}
 		margin-bottom: 10px;
 		color: $redactor-main-title;
 	}
-	&__title::after {
+	&__title::after { // Написать сокращённо
 		content: "";
 		display: inline-block;
 		height: 43px; width: 2px;
@@ -102,7 +102,7 @@ body {font: 100% sans-serif}
 		background-color: $redactor-main-title-pointer;
 	}
 }
-.redactor-main::after {
+.redactor-main::after { // Написать сокращённо
 	content: "";
 	display: block;
 	height: 3px; width: 100%;
@@ -116,15 +116,15 @@ body {font: 100% sans-serif}
 	background-color: $redactor-secondary-background;
 	z-index: 2;
 	&__list {
-		width: 776px;
-		max-width: 100%;
+		width: 776px; // Поменять местами с max-width
+		max-width: 100%; // Поменять местами с width
 		list-style: none;
 	}
 	&__item {
 		display: inline-block;
 		margin-right: 20px;
 	}
-	&__item:last-child {margin-right: 0}
+	&__item:last-child {margin-right: 0} // Написать сокращённо
 	&__link {
 		display: inherit;
 		font-size: 0;
@@ -135,5 +135,5 @@ body {font: 100% sans-serif}
 		color: $redactor-secondary-icon;
 		transition: all .1s ease-in;
 	}
-	&__link i.fas:hover {color: $redactor-secondary-icon-hover}
+	&__link i.fas:hover {color: $redactor-secondary-icon-hover} // Написать сокращённо
 }
