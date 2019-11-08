@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body { min-height: 100%; }
+body { font: 100% sans-serif; }
+
+.t-upper { text-transform: uppercase; }
+.capitalize { text-transform: capitalize; }
+.italic { font-style: italic; }
+
+.flex-container {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100vw;
+	height: 100vh;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: $flex-container-bg;
+}
+
+
+.paper {
+	position: relative;
+	width: 100%;
+	max-width: 1060px;
+	padding: 200px 0 34px;
+	background-color: $white;
+	box-shadow: 0 0 20px 5px rgba(0,0,0,.5);
+	z-index: 1;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 67px;
+		display: block;
+		height: 100%;
+		width: 2px;
+		background-color: $paper-decorative-border-color;
+	}
+
+	&__container {
+		width: 100%;
+		max-width: 845px;
+		margin: 0 auto;
+		padding: 0 15px;
+	}
+
+	&__published {
+		display: inline-block;
+		margin-bottom: 30px;
+		font: 300 20px $small-font;
+		letter-spacing: 5px;
+		color: $paper-published-color;
+	}
+
+	&__title {
+		display: inline-block;
+		font: 550 77px $title-font;
+		color: $paper-title-color;
+	}
+
+	&__subtitle {
+		display: inline-block;
+		margin-bottom: 50px;
+		font: italic 30px $main-font;
+		letter-spacing: .8px;
+		color: $paper-subtitle-color;
+	}
+
+	&__paragraph {
+		display: inline-block;
+		margin-bottom: 30px;
+		text-align: justify;
+		font: 26px $main-font;
+		color: $black;
+		&:last-child { margin-bottom: 0; }
+	}
+}
+
+
+.title-editor {
+	position: absolute;
+	top: -100px;
+	right: -70px;
+	width: 100%; // Размер задан родителю, а не ребёнку
+	max-width: 816px; // Размер задан родителю, а не ребёнку
+	padding: 47px 0 50px 60px;
+	background-color: $title-editor-bg;
+	z-index: 2;
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 3px;
+		background-color: $title-editor-decorative-border;
+	}
+
+	&__overheading {
+		display: inline-block;
+		font: 500 15px $small-font;
+		letter-spacing: 5px;
+		color: $title-editor-overheading-color;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		font: 500 48px $title-editor-title-font;
+		color: $title-editor-title-color;
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 2px;
+			height: 43px;
+			margin-left: 5px;
+			background-color: $title-editor-title-pointer;
+		}
+	}
+}
+
+
+.markup-editor {
+	position: absolute;
+	top: 92px;
+	right: -70px;
+	width: 100%; // Размер задан родителю, а не ребёнку
+	max-width: 760px; // Размер задан родителю, а не ребёнку
+	padding: 20px 0 20px 40px;
+	background-color: $markup-editor-bg;
+	z-index: 2;
+
+	&__list { list-style: none; }
+
+	&__item {
+		display: inline-block;
+		margin-right: 30px;
+		&:last-child { margin-right: 0; }
+	}
+
+	&__link {
+		display: inherit;
+		font-size: 0;
+		& .icon {
+			width: 30px;
+			height: 30px;
+			font-size: 30px;
+			color: $markup-editor-icon;
+			transition: all .1s ease-in;
+			&:hover { color: $markup-editor-icon-hover; }
+		}
+	}
+}

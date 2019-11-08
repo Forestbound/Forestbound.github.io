@@ -1,0 +1,80 @@
+.dl-links {
+	display: flex;
+	flex-flow: row wrap;
+	height: 480px;
+	justify-content: space-between;
+	align-content: space-between;
+	list-style: none;
+	@include xs-screen {
+		flex-flow: column nowrap;
+		height: 100%;
+	}
+	@include sm-screen {
+		flex-flow: column nowrap;
+		height: 100%;
+	}
+	@include md-screen {
+		flex-flow: row wrap;
+		justify-content: space-evenly;
+		height: 100%;
+	}
+
+	&__item {
+		flex: 0 1 33%;
+		background-size: 100% 100%;
+		background-color: $main-bg;
+		&:first-child {
+			background-image: url(../img/topworkz.jpg);
+		}
+		&:nth-child(2) {
+			background-image: url(../img/joint.jpg);
+		}
+		&:nth-child(3) {
+			background-image: url(../img/market.jpg);
+		}
+		&:nth-child(4) {
+			background-image: url(../img/worktop.jpg);
+		}
+		&:nth-child(5) {
+			background-image: url(../img/lable.jpg);
+		}
+		&:last-child {
+			background-image: url(../img/kyiv.jpg);
+		}
+		@include xs-screen {
+			margin-bottom: 5px;
+			&:last-child { margin-bottom: 0; }
+		}
+		@include sm-screen {
+			margin-bottom: 5px;
+			&:last-child { margin-bottom: 0; }
+		}
+		@include md-screen {
+			flex: 0 1 49%;
+			margin-bottom: 5px;
+			&:nth-child(5),
+			&:last-child { margin-bottom: 0; }
+		}
+	}
+
+	&__link {
+		display: flex;
+		flex-flow: column nowrap;
+		height: 237px;
+		padding: 0 0 33px 43px;
+		justify-content: flex-end;
+		font-size: 0;
+		color: $white;
+		letter-spacing: 5px;
+		text-decoration: none;
+		transition: all ease .2s;
+		&:hover { background-color: rgba($white, .2); }
+		@include xs-screen { height: 180px; }
+		&-title {
+			font-size: px_to_rem(34px);
+			@include xs-screen { font-size: px_to_rem(28px); }
+			@include md-screen { font-size: px_to_rem(28px); }
+			@include lg-screen { font-size: px_to_rem(30px); }
+		}
+	}
+}

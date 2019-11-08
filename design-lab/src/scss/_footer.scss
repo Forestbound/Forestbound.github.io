@@ -1,0 +1,18 @@
+.dl-footer {
+	display: flex;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	justify-content: center;
+
+	&__flex-wrapper {
+		display: inherit;
+		flex: 0 1 320px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__copyright {
+		font-size: px_to_rem(14px);
+		color: $dark;
+	}
+}
