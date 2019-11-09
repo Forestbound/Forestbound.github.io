@@ -14,12 +14,15 @@
 
 	&__description-block {
 		position: relative;
-		padding: 72px 171px 26px;
+		display: flex;
+		flex-flow: column nowrap;
+		padding-top: 50px;
+		padding-bottom: 26px;
 		border: 2px solid $white;
 		border-top: none;
-		@include xs-screen { padding: 45px 25px 26px; }
-		@include sm-screen { padding: 45px 25px 26px; }
-		@include md-screen { padding: 55px 80px 35px; }
+		@include xs-screen { padding: 45px 0 26px; }
+		@include sm-screen { padding: 45px 0 26px; }
+		@include md-screen { padding: 55px 0 35px; }
 		&::before,
 		&::after {
 			content: "";

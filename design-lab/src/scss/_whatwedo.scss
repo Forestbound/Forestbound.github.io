@@ -12,13 +12,15 @@
 
 	&__description-block {
 		position: relative;
-		padding: 123px 160px 88px 170px;
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 123px 0 170px;
 		text-align: center;
 		border: 2px solid $dark;
 		border-top: none;
-		@include xs-screen { padding: 80px 25px 26px; }
-		@include sm-screen { padding: 80px 25px 26px; }
-		@include md-screen { padding: 100px 80px 35px; }
+		@include xs-screen { padding: 80px 0 26px; }
+		@include sm-screen { padding: 80px 0 26px; }
+		@include md-screen { padding: 100px 0 35px; }
 		&::before,
 		&::after {
 			content: "";
