@@ -5,13 +5,13 @@
 
 	&__description-block {
 		position: relative;
-		padding: 73px 166px 48px 177px;
+		padding: 73px 0 48px;
 		text-align: center;
 		border: 2px solid $dark;
 		border-top: none;
-		@include xs-screen { padding: 60px 25px 35px; }
-		@include sm-screen { padding: 60px 25px 35px; }
-		@include md-screen { padding: 50px 25px 35px; }
+		@include xs-screen { padding: 60px 0 35px; }
+		@include sm-screen { padding: 60px 0 35px; }
+		@include md-screen { padding: 50px 0 35px; }
 		&::before,
 		&::after {
 			content: "";
