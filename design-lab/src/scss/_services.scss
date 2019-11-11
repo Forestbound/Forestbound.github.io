@@ -18,6 +18,7 @@
 		flex-flow: column nowrap;
 		padding-top: 50px;
 		padding-bottom: 26px;
+		align-items: center;
 		border: 2px solid $white;
 		border-top: none;
 		@include xs-screen { padding: 45px 0 26px; }

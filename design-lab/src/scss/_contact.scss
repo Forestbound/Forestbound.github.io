@@ -5,7 +5,10 @@
 
 	&__description-block {
 		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
 		padding: 73px 0 48px;
+		align-items: center;
 		text-align: center;
 		border: 2px solid $dark;
 		border-top: none;
