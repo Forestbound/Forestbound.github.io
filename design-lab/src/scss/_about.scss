@@ -15,7 +15,10 @@
 		display: flex;
 		flex-flow: column nowrap;
 		padding: 60px 0 26px;
+<<<<<<< HEAD
 		align-items: center;
+=======
+>>>>>>> b6b54429c0eda4c6940a17ea342ddce6ff2f1830
 		border: 2px solid $dark;
 		border-top: none;
 		@include xs-screen { padding: 45 0 26px; }
