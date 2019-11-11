@@ -1,24 +1,24 @@
 .dl-contact {
 	padding-top: 138px;
+
 	@include xs-screen { padding-top: 80px; }
 	@include sm-screen { padding-top: 80px; }
 
 	&__description-block {
 		position: relative;
-<<<<<<< HEAD
 		display: flex;
 		flex-flow: column nowrap;
 		padding: 73px 0 48px;
 		align-items: center;
-=======
 		padding: 73px 0 48px;
->>>>>>> b6b54429c0eda4c6940a17ea342ddce6ff2f1830
 		text-align: center;
 		border: 2px solid $dark;
 		border-top: none;
+
 		@include xs-screen { padding: 60px 0 35px; }
 		@include sm-screen { padding: 60px 0 35px; }
 		@include md-screen { padding: 50px 0 35px; }
+
 		&::before,
 		&::after {
 			content: "";
@@ -27,13 +27,16 @@
 			width: 242px;
 			height: 2px;
 			background-color: $dark;
+
 			@include xs-screen { width: 100px; }
 			@include sm-screen { width: 120px; }
 			@include md-screen { width: 200px; }
 		}
+
 		&::before { left: 0; }
 		&::after { right: 0; }
 	}
+
 
 	&__title {
 		position: absolute;
@@ -43,8 +46,10 @@
 		font-size: px_to_rem(34px);
 		letter-spacing: 5px;
 		color: $dark;
+
 		@include xs-screen { font-size: px_to_rem(26px); }
 	}
+
 
 	&__description {
 		margin-bottom: 30px;
@@ -53,6 +58,7 @@
 		text-align: center;
 		color: $dark;
 	}
+
 
 	&__button {
 		display: inline-block;
@@ -64,6 +70,7 @@
 		border: 2px solid $dark;
 		text-decoration: none;
 		transition: all ease .4s;
+
 		&:hover {
 			color: $dark;
 			background-color: $white;
