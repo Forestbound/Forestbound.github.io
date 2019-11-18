@@ -5,13 +5,15 @@
 	background-color: $main-bg;
 
 	@include xs-screen {
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding-top: 60px;
+		padding-bottom: 50px;
+		background-image: none;
 	}
 
 	@include sm-screen {
 		padding-top: 80px;
 		padding-bottom: 80px;
+		background-image: none;
 	}
 
 	&__description-block {
@@ -24,7 +26,7 @@
 		border: 2px solid $white;
 		border-top: none;
 
-		@include xs-screen { padding: 45px 0 26px; }
+		@include xs-screen { padding: 30px 0 20px; }
 		@include sm-screen { padding: 45px 0 26px; }
 		@include md-screen { padding: 55px 0 35px; }
 
@@ -36,8 +38,7 @@
 			width: 242px;
 			height: 2px;
 			background-color: $white;
-
-			@include xs-screen { width: 100px; }
+			@include xs-screen { width: 50px; }
 			@include sm-screen { width: 120px; }
 		}
 
@@ -55,7 +56,10 @@
 		letter-spacing: 5px;
 		color: $white;
 
-		@include xs-screen { font-size: 26px; }
+		@include xs-screen {
+			font-size: px_to_rem(20px);
+			top: -13px;
+		}
 	}
 
 
@@ -64,5 +68,10 @@
 		line-height: 26px;
 		text-align: center;
 		color: $white;
+
+		@include xs-screen {
+			font-size: px_to_rem(14px);
+			line-height: 20px;
+		}
 	}
 }

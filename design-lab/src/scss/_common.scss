@@ -7,7 +7,11 @@
 }
 
 html, body { min-height: 100%; }
-body { font: 100% Lato, sans-serif; }
+
+body {
+	font: 100% Lato, sans-serif;
+	@include media-hidden;
+}
 
 
 .t-upper { text-transform: uppercase; }
@@ -21,4 +25,7 @@ body { font: 100% Lato, sans-serif; }
 }
 
 
-.text-wrapper { width: 61%; }
+.text-wrapper {
+	width: 61%;
+	@include xs-screen { width: 80%; }
+}

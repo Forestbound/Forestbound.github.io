@@ -4,12 +4,20 @@
 	padding-bottom: 60px;
 	justify-content: center;
 
+	@include xs-screen {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
 	&__flex-wrapper {
 		display: inherit;
 		flex: 0 1 320px;
 		justify-content: space-between;
 		align-items: center;
 	}
+
+
+	&__logo { font-size: 0; }
 
 
 	&__copyright {

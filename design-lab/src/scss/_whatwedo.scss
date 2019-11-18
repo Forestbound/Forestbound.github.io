@@ -3,8 +3,8 @@
 	padding-bottom: 113px;
 
 	@include xs-screen {
-		padding-top: 80px;
-		padding-bottom: 80px;
+		padding-top: 60px;
+		padding-bottom: 50px;
 	}
 
 	@include sm-screen {
@@ -22,7 +22,7 @@
 		border: 2px solid $dark;
 		border-top: none;
 
-		@include xs-screen { padding: 80px 0 26px; }
+		@include xs-screen { padding: 70px 0 20px; }
 		@include sm-screen { padding: 80px 0 26px; }
 		@include md-screen { padding: 100px 0 35px; }
 
@@ -35,7 +35,7 @@
 			height: 2px;
 			background-color: $dark;
 
-			@include xs-screen { width: 100px; }
+			@include xs-screen { width: 50px; }
 			@include sm-screen { width: 120px; }
 			@include md-screen { width: 190px; }
 		}
@@ -54,7 +54,11 @@
 		letter-spacing: 5px;
 		color: $dark;
 
-		@include xs-screen { font-size: 26px; }
+		@include xs-screen {
+			font-size: px_to_rem(20px);
+			top: -13px;
+		}
+
 		@include sm-screen { letter-spacing: 4px; }
 	}
 
@@ -64,12 +68,13 @@
 
 	&__item {
 		margin-bottom: 80px;
-
 		&:last-child { margin-bottom: 0; }
+		@include xs-screen { margin-bottom: 60px; }
 
 		&-logo {
 			margin-bottom: 20px;
 			font-size: 0;
+			@include xs-screen { margin-bottom: 10px; }
 		}
 
 		&-title {
@@ -77,12 +82,18 @@
 			font-size: px_to_rem(20px);
 			letter-spacing: 3px;
 			color: $dark;
+			@include xs-screen { margin-bottom: 10px; }
 		}
 
 		&-description {
 			font-size: px_to_rem(14px);
 			line-height: 26px;
 			color: $dark;
+
+			@include xs-screen {
+				font-size: px_to_rem(14px);
+				line-height: 20px;
+		}
 		}
 	}
 }

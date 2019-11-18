@@ -24,15 +24,13 @@
 
 	&__item {
 		flex: 0 1 33%;
-		background-size: 100% 100%;
-		background-color: $main-bg;
 
-		&:first-child { background-image: url(../img/topworkz.jpg); }
-		&:nth-child(2) { background-image: url(../img/joint.jpg); }
-		&:nth-child(3) { background-image: url(../img/market.jpg); }
-		&:nth-child(4) { background-image: url(../img/worktop.jpg); }
-		&:nth-child(5) { background-image: url(../img/lable.jpg); }
-		&:last-child { background-image: url(../img/kyiv.jpg); }
+		&:first-child .dl-links__link { background-image: url(../img/topworkz.jpg); }
+		&:nth-child(2) .dl-links__link { background-image: url(../img/joint.jpg); }
+		&:nth-child(3) .dl-links__link { background-image: url(../img/market.jpg); }
+		&:nth-child(4) .dl-links__link { background-image: url(../img/worktop.jpg); }
+		&:nth-child(5) .dl-links__link { background-image: url(../img/lable.jpg); }
+		&:last-child .dl-links__link { background-image: url(../img/kyiv.jpg); }
 
 		@include xs-screen {
 			margin-bottom: 5px;
@@ -59,20 +57,21 @@
 		height: 237px;
 		padding: 0 0 33px 43px;
 		justify-content: flex-end;
+		align-items: flex-start;
 		font-size: 0;
 		color: $white;
 		letter-spacing: 5px;
 		text-decoration: none;
-		transition: all ease .2s;
-
-		&:hover { background-color: rgba($white, .2); }
-
-		@include xs-screen { height: 180px; }
+		background-size: 100% 100%;
+		background-color: $main-bg;
+		@include xs-screen {
+			height: 180px;
+			padding: 0 0 20px 20px;
+		}
 
 		&-title {
 			font-size: px_to_rem(34px);
-
-			@include xs-screen { font-size: px_to_rem(28px); }
+			@include xs-screen { font-size: px_to_rem(22px); }
 			@include md-screen { font-size: px_to_rem(28px); }
 			@include lg-screen { font-size: px_to_rem(30px); }
 		}
