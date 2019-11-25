@@ -1,27 +1,54 @@
 .dl-footer {
 	display: flex;
-	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	justify-content: center;
 
 	@include xs-screen {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+
+	@include sm-screen {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	@include md-screen {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
 
 	&__flex-wrapper {
 		display: inherit;
-		flex: 0 1 320px;
+		flex-basis: 320px;
 		justify-content: space-between;
 		align-items: center;
 	}
 
+	&__logo {
+		font-size: 0;
+		transform: scale(.5);
+	}
 
-	&__logo { font-size: 0; }
+	&__logo-img {
 
+		& .cls-1, .cls-2 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+     & .cls-1 { stroke: $dark; }
+     & .cls-1, .cls-2, .cls-3 { fill-rule: evenodd; }
+     & .cls-2 { stroke: $dark; }
+     & .cls-3, .cls-4 { fill: $dark; }
+	}
 
 	&__copyright {
-		font-size: px_to_rem(14px);
 		color: $dark;
+		font-size: px_to_rem(14px);
+		font-weight: 400;
+		@include xs-screen { font-size: px_to_rem(12px); }
+		@include sm-screen { font-size: px_to_rem(12px); }
 	}
 }

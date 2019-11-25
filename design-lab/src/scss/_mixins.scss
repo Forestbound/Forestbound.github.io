@@ -3,20 +3,56 @@
 	@return $target / $context + 0rem;
 }
 
+// Sections' Mixins
+@mixin title {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: $white;
+	font-size: px_to_rem(34px);
+	font-weight: 700;
+	letter-spacing: 5px;
+}
 
+@mixin description-block {
+		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 60px 0 30px;
+		align-items: center;
+		text-align: center;
+		border: 2px solid $white;
+		border-top: none;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 242px;
+			height: 2px;
+			background-color: $white;
+			@include xs-screen { width: 50px; }
+			@include sm-screen { width: 120px; }
+			@include md-screen { width: 190px; }
+		}
+		&::before { left: 0; }
+		&::after { right: 0; }
+}
+
+// Responsive
 @mixin media-hidden {
 	@media only screen and (max-width: 319px) {
 		display: none;
 	}
 }
 
-
 @mixin xs-screen {
-	@media only screen and (max-width: 575px) {
+	@media only screen and (min-width: 320px) and (max-width: 575px) {
 		@content;
 	}
 }
-
 
 @mixin sm-screen {
 	@media only screen and (min-width: 576px) and (max-width: 767px) {
@@ -24,20 +60,17 @@
 	}
 }
 
-
 @mixin md-screen {
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
 		@content;
 	}
 }
 
-
 @mixin lg-screen {
 	@media only screen and (min-width: 992px) and (max-width: 1199px) {
 		@content;
 	}
 }
-
 
 @mixin xl-screen {
 	@media only screen and (min-width: 1200px) {

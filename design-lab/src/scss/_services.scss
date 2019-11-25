@@ -1,77 +1,57 @@
 .dl-services {
-	padding-top: 128px;
-	padding-bottom: 109px;
-	background-image: url(../img/services.jpg);
-	background-color: $main-bg;
+	padding: 120px 0;
+	background: url(../img/services.jpg) 0% 0%/cover no-repeat $dark;
 
 	@include xs-screen {
-		padding-top: 60px;
-		padding-bottom: 50px;
+		padding: 40px 0;
 		background-image: none;
 	}
 
 	@include sm-screen {
-		padding-top: 80px;
-		padding-bottom: 80px;
-		background-image: none;
+		padding: 60px 0;
+		background-position: 70%;
+	}
+
+	@include md-screen {
+		padding: 80px 0;
+		background-position: 70%;
+	}
+
+	@include lg-screen {
+		padding: 100px 0;
+		background-position: 70%;
 	}
 
 	&__description-block {
-		position: relative;
-		display: flex;
-		flex-flow: column nowrap;
-		padding-top: 50px;
-		padding-bottom: 26px;
-		align-items: center;
-		border: 2px solid $white;
-		border-top: none;
-
-		@include xs-screen { padding: 30px 0 20px; }
-		@include sm-screen { padding: 45px 0 26px; }
-		@include md-screen { padding: 55px 0 35px; }
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			width: 242px;
-			height: 2px;
-			background-color: $white;
-			@include xs-screen { width: 50px; }
-			@include sm-screen { width: 120px; }
-		}
-
-		&::before { left: 0; }
-		&::after { right: 0; }
+		@include description-block;
+		@include xs-screen { padding: 40px 0 20px; }
+		@include sm-screen { padding: 50px 0 25px; }
 	}
 
-
 	&__title {
-		position: absolute;
-		top: -20px;
-		left: 50%;
-		transform: translateX(-50%);
-		font-size: px_to_rem(34px);
-		letter-spacing: 5px;
+		@include title;
 		color: $white;
 
 		@include xs-screen {
-			font-size: px_to_rem(20px);
-			top: -13px;
+			top: -11px;
+			font-size: px_to_rem(18px);
+		}
+
+		@include sm-screen {
+			top: -17px;
+			font-size: px_to_rem(28px);
 		}
 	}
 
-
 	&__description {
-		font-size: px_to_rem(16px);
-		line-height: 26px;
-		text-align: center;
 		color: $white;
+		font-size: px_to_rem(16px);
+		font-weight: 300;
+		line-height: 24px;
 
 		@include xs-screen {
 			font-size: px_to_rem(14px);
-			line-height: 20px;
+			line-height: 22px;
 		}
 	}
 }
