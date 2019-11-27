@@ -1,0 +1,20 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'); // Playfair Display
+@import url('https://fonts.googleapis.com/css?family=Lato:300&display=swap'); // Lato (Light 300)
+@import url('https://fonts.googleapis.com/css?family=Lato:300i&display=swap'); // Lato (Light 300 Italic)
+@import url('https://fonts.googleapis.com/css?family=Lato:700&display=swap'); // Lato (Bold 700)
+
+$base-size: 16px;
+
+$text: Lato;
+$title: "Playfair Display";
+
+
+// Colors
+$white: #fff;
+$black: #000;
+
+$dark: #171717;
+$orange: #eaa258;
+
+$button-border: $orange;

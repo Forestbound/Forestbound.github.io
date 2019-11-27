@@ -1,79 +1,78 @@
 .dl-contact {
-	padding-top: 138px;
-
-	@include xs-screen { padding-top: 80px; }
-	@include sm-screen { padding-top: 80px; }
+	padding-top: 120px;
+	@include xs-screen { padding-top: 40px; }
+	@include sm-screen { padding-top: 60px; }
+	@include md-screen { padding-top: 80px; }
+	@include lg-screen { padding-top: 100px; }
 
 	&__description-block {
-		position: relative;
-		display: flex;
-		flex-flow: column nowrap;
-		padding: 73px 0 48px;
-		align-items: center;
-		padding: 73px 0 48px;
-		text-align: center;
-		border: 2px solid $dark;
-		border-top: none;
-
-		@include xs-screen { padding: 60px 0 35px; }
-		@include sm-screen { padding: 60px 0 35px; }
-		@include md-screen { padding: 50px 0 35px; }
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			width: 242px;
-			height: 2px;
-			background-color: $dark;
-
-			@include xs-screen { width: 100px; }
-			@include sm-screen { width: 120px; }
-			@include md-screen { width: 200px; }
-		}
-
-		&::before { left: 0; }
-		&::after { right: 0; }
+		@include description-block;
+		border-color: $dark;
+		&::before, &::after { background-color: $dark; }
+		@include xs-screen { padding: 50px 0 20px; }
+		@include sm-screen { padding: 50px 0 25px; }
 	}
-
 
 	&__title {
-		position: absolute;
-		top: -20px;
-		left: 50%;
-		transform: translateX(-50%);
-		font-size: px_to_rem(34px);
-		letter-spacing: 5px;
+		@include title;
 		color: $dark;
 
-		@include xs-screen { font-size: px_to_rem(26px); }
-	}
+		@include xs-screen {
+			font-size: px_to_rem(18px);
+			top: -11px;
+		}
 
+		@include sm-screen {
+			font-size: px_to_rem(28px);
+			top: -17px;
+		}
+	}
 
 	&__description {
 		margin-bottom: 30px;
-		font-size: px_to_rem(16px);
-		line-height: 26px;
-		text-align: center;
 		color: $dark;
-	}
+		font-size: px_to_rem(16px);
+		font-weight: 300;
+		line-height: 24px;
 
+		@include xs-screen {
+			margin-bottom: 20px;
+			font-size: px_to_rem(14px);
+			line-height: 22px;
+		}
+
+		@include sm-screen { margin-bottom: 25px; }
+	}
 
 	&__button {
 		display: inline-block;
-		width: 395px;
-		padding: 16px 0;
-		box-sizing: border-box;
-		color: $white;
+		width: 100%;
+		max-width: 395px;
+		padding: 20px 0;
+		font-size: 0;
+		text-decoration: none;
 		background-color: $dark;
 		border: 2px solid $dark;
-		text-decoration: none;
 		transition: all ease .4s;
+		&:hover { background-color: $white; }
+		&:hover .dl-contact__button-text { color: $dark; }
 
-		&:hover {
-			color: $dark;
-			background-color: $white;
+		@include xs-screen {
+			max-width: 180px;
+			padding: 10px 0;
 		}
+
+		@include sm-screen {
+			max-width: 270px;
+			padding: 15px 0;
+		}
+	}
+
+	&__button-text {
+		color: $white;
+		font-size: px_to_rem(16px);
+		font-weight: 400;
+		letter-spacing: 2px;
+		@include xs-screen { font-size: px_to_rem(14px); }
 	}
 }

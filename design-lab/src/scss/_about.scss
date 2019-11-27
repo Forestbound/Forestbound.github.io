@@ -1,68 +1,47 @@
 .dl-about {
-	padding-top: 140px;
-	padding-bottom: 160px;
-
-	@include xs-screen {
-		padding-top: 80px;
-		padding-bottom: 80px;
-	}
-
-	@include sm-screen {
-		padding-top: 80px;
-		padding-bottom: 80px;
-	}
+	padding: 120px 0;
+	@include xs-screen { padding: 40px 0; }
+	@include sm-screen { padding: 60px 0; }
+	@include md-screen { padding: 80px 0 }
+	@include lg-screen { padding: 100px 0; }
 
 	&__description-block {
-		position: relative;
-		display: flex;
-		flex-flow: column nowrap;
-		padding: 60px 0 26px;
-		align-items: center;
-		border: 2px solid $dark;
-		border-top: none;
-
-		@include xs-screen { padding: 45 0 26px; }
-		@include sm-screen { padding: 45px 0 26px; }
-		@include md-screen { padding: 55px 0 35px; }
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			width: 242px;
-			height: 2px;
-			background-color: $dark;
-
-			@include xs-screen { width: 100px; }
-			@include sm-screen { width: 120px; }
-		}
-
-		&::before { left: 0; }
-		&::after { right: 0; }
+		@include description-block;
+		border-color: $dark;
+		&::before, &::after { background-color: $dark; }
+		@include xs-screen { padding: 40px 0 20px; }
+		@include sm-screen { padding: 50px 0 25px; }
 	}
-
 
 	&__title {
-		position: absolute;
-		top: -20px;
-		left: 50%;
-		transform: translateX(-50%);
-		font-size: px_to_rem(34px);
-		letter-spacing: 5px;
+		@include title;
 		color: $dark;
 
-		@include xs-screen { font-size: px_to_rem(26px); }
+		@include xs-screen {
+			top: -11px;
+			font-size: px_to_rem(18px);
+		}
+
+		@include sm-screen {
+			top: -17px;
+			font-size: px_to_rem(28px);
+		}
 	}
 
-
 	&__description {
-		margin-bottom: 30px;
-		font-size: px_to_rem(16px);
-		line-height: 24px;
-		text-align: center;
+		margin-bottom: 20px;
 		color: $dark;
-
+		font-size: px_to_rem(16px);
+		font-weight: 300;
+		line-height: 24px;
 		&:last-child { margin-bottom: 0; }
+
+		@include xs-screen {
+			margin-bottom: 10px;
+			font-size: px_to_rem(14px);
+			line-height: 22px;
+		}
+
+		@include sm-screen { margin-bottom: 15px; }
 	}
 }

@@ -1,0 +1,150 @@
+.section {
+	padding: 130px 0;
+	@include xs-screen { padding: 15px 0; }
+	@include sm-screen { padding: 50px 0; }
+	@include md-screen { padding: 80px 0; }
+	@include lg-screen { padding: 100px 0; }
+
+	&__article {
+		width: 100%;
+		max-width: 1400px;
+		padding: 120px 0;
+		box-shadow:	0 5px 70px rgba(117,117,117,.3);
+		@include xs-screen { padding: 30px 0; }
+		@include sm-screen { padding: 50px 0; }
+		@include md-screen { padding: 70px 0; }
+		@include lg-screen { padding: 100px 0; }
+	}
+
+
+	&__article-container {
+		width: 100%;
+		max-width: 1220px;
+		margin: 0 auto;
+		padding: 0 30px;
+
+		@include xs-screen {
+			padding: 0 20px;
+			text-align: center;
+		}
+
+		@include sm-screen { text-align: center; }
+		@include md-screen { text-align: center; }
+	}
+
+
+	&__article-title {
+		display: inline-block;
+		margin-bottom: 20px;
+		color: $dark;
+		font: px_to_rem(42px) $title;
+	}
+
+
+	&__article-wrapper { margin-bottom: 10px; }
+
+
+	&__article-text {
+		margin-bottom: 40px;
+		color: rgba($dark, .7);
+		font: px_to_rem(18px) $text;
+		line-height: 34px;
+
+		@include xs-screen {
+			margin-bottom: 20px;
+			font-size: px_to_rem(16px);
+			text-align: justify;
+			line-height: 28px;
+		}
+
+		@include sm-screen {
+			margin-bottom: 30px;
+			text-align: justify;
+			line-height: 30px;
+		}
+
+		@include md-screen {
+			margin-bottom: 30px;
+			text-align: justify;
+			line-height: 32px;
+		}
+
+		&:first-child::first-letter {
+			float: left;
+			margin-right: 20px;
+			color: $dark;
+			font: px_to_rem(110px) $title;
+			text-transform: uppercase;
+			line-height: 90px;
+
+			@include xs-screen {
+				margin-right: 10px;
+				font-size: px_to_rem(90px);
+				line-height: 75px;
+			}
+
+			@include sm-screen {
+				margin-right: 15px;
+				font-size: px_to_rem(95px);
+				line-height: 80px;
+			}
+
+			@include md-screen {
+				margin-right: 15px;
+				font-size: px_to_rem(100px);
+				line-height: 85px;
+			}
+		}
+
+		&:last-child { margin-bottom: 0; }
+	}
+
+
+	&__article-cite {
+		display: block;
+		margin-bottom: 30px;
+		color: rgba($dark, .7);
+		font: italic px_to_rem(24px) $text;
+		@include xs-screen { font-size: px_to_rem(21px); }
+
+		&::before {
+			content: open-quote;
+			margin-right: 30px;
+			font-size: 70px;
+
+			@include xs-screen {
+				margin-right: 10px;
+				font-size: 50px;
+			}
+
+			@include sm-screen { margin-right: 15px; }
+			@include md-screen { margin-right: 20px; }
+		}
+
+		&::after { content: none; }
+	}
+
+
+	&__article-button {
+		display: inline-block;
+		padding: 20px 70px;
+		color: $orange;
+		font: bold px_to_rem(18px) $text;
+		border: 2px solid $button-border;
+		text-decoration: none;
+		transition: all ease .2s;
+
+		@include xs-screen {
+			padding: 10px 50px;
+			font-size: px_to_rem(16px);
+		}
+
+		@include sm-screen { padding: 15px 60px; }
+
+		&:hover {
+			color: $white;
+			background-color: $orange;
+			box-shadow:	0 5px 20px rgba(117,117,117,.7);
+		}
+	}
+}

@@ -1,0 +1,26 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+html, body { min-height: 100vh; }
+
+body {
+	color: $font-main-color;
+	font: 100% $main-font, sans-serif;
+	@include media-hidden;
+}
+
+.t-upper { text-transform: uppercase; }
+.t-caps { text-transform: capitalize; }
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	@include xs-screen { padding: 0 10px; }
+}

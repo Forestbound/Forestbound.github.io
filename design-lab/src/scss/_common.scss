@@ -1,17 +1,21 @@
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ -moz-box-sizing: border-box;
+ -webkit-box-sizing: border-box;
 }
 
-html, body { min-height: 100%; }
-body { font: 100% Lato, sans-serif; }
+html, body { min-height: 100vh; }
 
+body {
+	font: 100% Lato, sans-serif;
+	@include media-hidden;
+}
 
 .t-upper { text-transform: uppercase; }
-
 
 .container {
 	width: 100%;
@@ -20,5 +24,8 @@ body { font: 100% Lato, sans-serif; }
 	padding: 0 15px;
 }
 
-
-.text-wrapper { width: 61%; }
+.text-wrapper {
+	width: 60%;
+	@include xs-screen { width: 80%; }
+	@include sm-screen { width: 70%; }
+}
