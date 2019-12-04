@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, width=device-width">
+	<title>Sign In</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/fav/favicon.png">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="white_space">
+		<form class="sign_card">
+			<div class="container">
+				<ul class="sign_card__list">
+					<li class="sign_card__list-item">
+						<a href="#" class="sign_card__link sign_card__link--active">Sign in</a>
+					</li>
+					<li class="sign_card__list-item">
+						<a href="#" class="sign_card__link">Join us</a>
+					</li>
+				</ul>
+
+				<label>
+					<span class="sign_card__input_description">Username</span>
+					<input type="text" class="sign_card__input" name="login" minlength="6" placeholder="Введите ваш замечательный логин" required>
+				</label>
+
+				<label>
+					<span class="sign_card__input_description">Password</span>
+					<input type="password" class="sign_card__input" name="password" minlength="8" placeholder="Ваш пароль, например: •••••••••••" required>
+				</label>
+
+				<label class="sign_card__checkbox-label">
+					<input type="checkbox" class="sign_card__checkbox">
+					<span class="sign_card__checkbox-custom"></span>
+					<span class="sign_card__checkbox-description">
+						Keep me signed in
+					</span>
+				</label>
+
+				<input type="submit" class="sign_card__submit" value="Sign in">
+
+				<ul class="sign_card__footer">
+					<li>
+						<a href="" class="sign_card__footer-link">Forgot password</a>
+					</li>
+					<li>
+						<a href="" class="sign_card__footer-link">Create an account</a>
+					</li>
+				</ul>
+
+			</div>
+		</form>
+	</div>
+	<script src="js/bundle.js"></script>
+</body>
+</html>

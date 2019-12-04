@@ -1,0 +1,139 @@
+.sign_card {
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+	padding: 55px 0;
+	background: linear-gradient(to right top, rgba(1, 20, 179, .9) 20%, rgba(200, 6, 214, .7)), url(../img/background.png) 28% 0/auto no-repeat;
+	border-radius: 5px;
+	box-shadow: 0 20px 20px rgba(0, 0, 0, .7);
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 40px;
+		list-style: none;
+	}
+
+	&__list-item {
+		margin-right: 20px;
+		&:last-child { margin-right: 0; }
+	}
+
+	&__link {
+		position: relative;
+		text-decoration: none;
+		color: rgba($light, .7);
+		font-size: px_to_rem(18px);
+		transition: color .5s;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 110%;
+			width: 0; height: 2px;
+			transition: width .5s;
+			background-color: $underline-on-focus;
+		}
+
+		&:hover {
+			color: $light;
+			&::before { width: 100%; }
+		}
+	}
+
+	&__link--active {
+		position: relative;
+		color: $light;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 110%;
+			width: 100%; height: 2px;
+			background-color: $underline-on-focus;
+		}
+	}
+
+	&__input {
+		width: 100%; height: 40px;
+		color: $light;
+		font: $main-font;
+		background-color: rgba(0, 0, 0, .1);
+		border: 2px solid rgba($light, .3);
+		padding: 5px;
+		&:focus { background-color: rgba(0, 0, 0, .2); }
+	}
+
+	&__input_description {
+		display: inline-block;
+		color: $light;
+		font-size: px_to_rem(16px);
+		margin-bottom: 5px;
+		transition: color .5s;
+		cursor: pointer;
+	}
+
+	&__checkbox {
+		position: absolute;
+		-webkit-appearance: none;
+	}
+
+	&__checkbox:checked + .sign_card__checkbox-custom { background: $green url(../img/check.png) 50% 50% no-repeat; }
+
+	&__checkbox-label {
+		display: inline-flex;
+		margin-bottom: 40px;
+		padding-left: 20px;
+		cursor: pointer;
+	}
+
+	&__checkbox-custom {
+		position: absolute;
+		margin-left: -20px;
+		width: 16px; height: 16px;
+		background-color: rgba($light, .3);
+		border-radius: 2px;
+	}
+
+	&__checkbox-description {
+		display: inline-block;
+		color: $light;
+		font-size: px_to_rem(13px);
+	}
+
+	&__submit {
+		width: 100%; height: 40px;
+		color: $light;
+		font: $main-font;
+		font-size: px_to_rem(18px);
+		background-color: $green;
+		border: none;
+		border-radius: 2px;
+		cursor: pointer;
+		margin-bottom: 30px;
+	}
+
+	&__footer {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		list-style: none;
+	}
+
+	&__footer-link {
+		position: relative;
+		font: $rest-font;
+		font-size: px_to_rem(13px);
+		color: rgba($light, .5);
+		text-decoration: none;
+		transition: color .5s;
+		&:hover { color: $light; }
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 120%;
+			width: 100%; height: 1px;
+			background-color: rgba($light, .1);
+		}
+	}
+}

@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: $main-font;
+	@include media-hidden;
+}
+
+.white_space {
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: $main-bgcolor;
+}
+
+.container {
+	width: 100%;
+	max-width: 292px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+label .sign_card__input { margin-bottom: 20px; }
+
+// Стили placeholder'а
+::-webkit-input-placeholder { color: rgba($light, .3); font-size: px_to_rem(12px); }
+:-moz-placeholder { color: rgba($light, .3); font-size: px_to_rem(12px); }
+::-moz-placeholder { color: rgba($light, .3); font-size: px_to_rem(12px); }
+:-ms-input-placeholder { color: rgba($light, .3); font-size: px_to_rem(12px); }
+
+// Прячем placeholder красиво (при фокусе)
+.sign_card__input::-webkit-input-placeholder       { opacity: 1; transition: opacity .5s; }
+.sign_card__input::-moz-placeholder                { opacity: 1; transition: opacity .5s; }
+.sign_card__input:-moz-placeholder                 { opacity: 1; transition: opacity .5s; }
+.sign_card__input:-ms-input-placeholder            { opacity: 1; transition: opacity .5s; }
+.sign_card__input:focus::-webkit-input-placeholder { opacity: 0; transition: opacity .5s; }
+.sign_card__input:focus::-moz-placeholder          { opacity: 0; transition: opacity .5s; }
+.sign_card__input:focus:-moz-placeholder           { opacity: 0; transition: opacity .5s; }
+.sign_card__input:focus:-ms-input-placeholder      { opacity: 0; transition: opacity .5s; }
