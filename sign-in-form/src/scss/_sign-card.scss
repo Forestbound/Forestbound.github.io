@@ -53,6 +53,11 @@
 		}
 	}
 
+	&__label {
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+
 	&__input {
 		width: 100%; height: 40px;
 		color: $light;
@@ -80,6 +85,7 @@
 	&__checkbox:checked + .sign_card__checkbox-custom { background: $green url(../img/check.png) 50% 50% no-repeat; }
 
 	&__checkbox-label {
+		position: relative;
 		display: inline-flex;
 		margin-bottom: 40px;
 		padding-left: 20px;
@@ -88,7 +94,7 @@
 
 	&__checkbox-custom {
 		position: absolute;
-		margin-left: -20px;
+		left: 0;
 		width: 16px; height: 16px;
 		background-color: rgba($light, .3);
 		border-radius: 2px;
