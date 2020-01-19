@@ -1,0 +1,20 @@
+@import "vars";
+@import "mixins";
+@import "common";
+
+@import "first-screen";
+@import "about";
+@import "services";
+@import "gallery";
+@import "subscribe";
+@import "blog";
+@import "contact";
+@import "footer";
+
+// Tasks
+// 1. Сделать ссылки в навигации якорями на соответсвующие секции
+// (Желательно). Поместить информациооный текст first-screen в flex-wrapper, так же, как это сделано в сеции about
+// (Желательно). Сделать плавный переход фонового цвета между секциями
+
+// Усовершенствование
+// Сделать плавную прокрутку к соответствующей секции при нажатии на ссылки навигации

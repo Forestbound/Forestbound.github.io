@@ -1,0 +1,86 @@
+.cahee-contact {
+	background: url(../img/bg-contact.png) 0% 0% / 100% 100% no-repeat;
+
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		height: 870px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text-wrapper {
+		width: 100%; max-width: 390px;
+		margin-bottom: 45px;
+		text-align: center;
+		color: $grey;
+	}
+
+	&__title { margin-bottom: 15px; }
+
+	&__form-container {
+		display: flex;
+		width: 100%;
+	}
+
+	&__form-wrapper {
+		flex-basis: 50%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input-address { flex-basis: 50px; }
+	&__input-email { flex-basis: 50px; }
+	&__input-phone { flex-basis: 50px; }
+
+	&__input-textarea {
+		flex-basis: 250px;
+		resize: none;
+	}
+
+	&__input-submit {
+		width: 170px; flex-basis: 50px;
+		background-color: $steelblue;
+		transition: box-shadow .7s ease;
+		&:hover { box-shadow: 0 5px 20px $steelblue; }
+	}
+
+	&__info-wrapper {
+		flex-basis: 50%;
+		padding-left: 80px;
+	}
+
+	&__info-list {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+	}
+
+	&__info-item {
+		flex-basis: 50px;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+		&:last-child { margin-bottom: 0; }
+	}
+
+	&__info-title {
+		color: $grey;
+		font: 700 px_to_rem(20px) $font-main;
+	}
+
+	&__info-text {
+		color: $grey;
+		font: 300 px_to_rem(20px) $font-main;
+	}
+}
+
+// Placeholder при фокусе
+.contact-input::-webkit-input-placeholder       { opacity: 1; transition: opacity .5s; }
+.contact-input::-moz-placeholder                { opacity: 1; transition: opacity .5s; }
+.contact-input:-moz-placeholder                 { opacity: 1; transition: opacity .5s; }
+.contact-input:-ms-input-placeholder            { opacity: 1; transition: opacity .5s; }
+.contact-input:focus::-webkit-input-placeholder { opacity: 0; transition: opacity .5s; }
+.contact-input:focus::-moz-placeholder          { opacity: 0; transition: opacity .5s; }
+.contact-input:focus:-moz-placeholder           { opacity: 0; transition: opacity .5s; }
+.contact-input:focus:-ms-input-placeholder      { opacity: 0; transition: opacity .5s; }

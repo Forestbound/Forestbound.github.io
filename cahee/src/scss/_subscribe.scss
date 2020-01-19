@@ -1,0 +1,58 @@
+.cahee-subscribe {
+	background: url(../img/bg-subscribe.png) right no-repeat;
+
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		height: 500px;
+		justify-content: center;
+	}
+
+	&__text-wrapper {
+		width: 100%; max-width: 550px;
+		margin-bottom: 30px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font: 700 px_to_rem(40px) $font-main;
+		color: $grey;
+	}
+
+	&__input-wrapper {
+		display: flex;
+		width: 100%; max-width: 750px;
+		justify-content: space-between;
+	}
+
+	&__email-input {
+		width: 100%; max-width: 550px; height: 55px;
+		padding-left: 15px;
+		font: 300 px_to_rem(17px) $font-main;
+		color: $grey;
+		border: 1px solid $grey;
+		border-radius: 4px;
+	}
+
+	&__submit-input {
+		background-color: $green;
+		transition: box-shadow .7s ease;
+		&:hover { box-shadow: 0 5px 20px $green; }
+	}
+}
+
+// Стили placeholder'а
+::-webkit-input-placeholder { color: rgba($grey, .7); font-size: px_to_rem(15px); }
+:-moz-placeholder { color: rgba($grey, .7); font-size: px_to_rem(15px); }
+::-moz-placeholder { color: rgba($grey, .7); font-size: px_to_rem(15px); }
+:-ms-input-placeholder { color: rgba($grey, .7); font-size: px_to_rem(15px); }
+
+// Placeholder при фокусе
+.cahee-subscribe__email-input::-webkit-input-placeholder       { opacity: 1; transition: opacity .5s; }
+.cahee-subscribe__email-input::-moz-placeholder                { opacity: 1; transition: opacity .5s; }
+.cahee-subscribe__email-input:-moz-placeholder                 { opacity: 1; transition: opacity .5s; }
+.cahee-subscribe__email-input:-ms-input-placeholder            { opacity: 1; transition: opacity .5s; }
+.cahee-subscribe__email-input:focus::-webkit-input-placeholder { opacity: 0; transition: opacity .5s; }
+.cahee-subscribe__email-input:focus::-moz-placeholder          { opacity: 0; transition: opacity .5s; }
+.cahee-subscribe__email-input:focus:-moz-placeholder           { opacity: 0; transition: opacity .5s; }
+.cahee-subscribe__email-input:focus:-ms-input-placeholder      { opacity: 0; transition: opacity .5s; }

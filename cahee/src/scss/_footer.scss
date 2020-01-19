@@ -1,0 +1,31 @@
+.cahee-footer {
+	background-color: $grey;
+
+	&__flex-container {
+		display: flex;
+		height: 90px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__copyright {
+		color: $light-grey;
+		font: 300 px_to_rem(16px) $font-main;
+	}
+
+	&__logo {
+		text-decoration: none;
+		color: $light-grey;
+		font: px_to_rem(35px) $font-logo;
+	}
+
+	&__made {
+		color: $light-grey;
+		font: 300 px_to_rem(16px) $font-main;
+
+		&-love {
+			color: $red;
+			font-weight: 700;
+		}
+	}
+}

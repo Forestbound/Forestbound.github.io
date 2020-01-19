@@ -1,0 +1,83 @@
+.cahee-blog {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-color: $violet;
+
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text-wrapper {
+		width: 100%; max-width: 570px;
+		margin-bottom: 45px;
+		text-align: center;
+		color: white;
+	}
+
+	&__title { margin-bottom: 15px; }
+
+	&__cards-wrapper {
+		display: flex;
+		width: 100%;
+		margin-bottom: 45px;
+		justify-content: space-between;
+		list-style: none;
+	}
+
+	&__card-item {
+		flex-basis: 370px;
+		display: flex;
+	}
+
+	&__link-more {
+		background-color: $red;
+		transition: box-shadow .7s ease;
+		&:hover { box-shadow: 0 5px 20px $red; }
+	}
+}
+
+.blog-card {
+	display: flex;
+	flex-direction: column;
+	width: 100%; height: 310px;
+	padding: 30px;
+	justify-content: space-between;
+	text-decoration: none;
+	color: white;
+	font-size: 0;
+	border-radius: 4px;
+
+	&__date-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%; max-width: 60px; flex-basis: 60px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		background-color: rgba($grey, .5);
+	}
+
+	&__date-number {
+		font: 700 px_to_rem(32px) $font-main;
+		line-height: 28px;
+	}
+
+	&__date-month { font: 700 px_to_rem(23px) $font-main; }
+
+	&__title {
+		margin-bottom: 10px;
+		font: 700 px_to_rem(18px) $font-main;
+	}
+
+	&__info {
+		color: rgba(white, .7);
+		font: 300 px_to_rem(13px) $font-main;
+	}
+}
+
+.blog-card-1 { background: linear-gradient(to top, rgba(black, .8) 10%, rgba(black, 0)), url(../img/blog-1.png) center center / cover no-repeat; }
+.blog-card-2 { background: linear-gradient(to top, rgba(black, .8) 10%, rgba(black, 0)), url(../img/blog-2.png) center bottom / cover no-repeat; }
+.blog-card-3 { background: linear-gradient(to top, rgba(black, .8) 10%, rgba(black, 0)), url(../img/blog-3.png) center center / cover no-repeat; }

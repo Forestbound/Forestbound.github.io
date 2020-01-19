@@ -1,0 +1,70 @@
+.cahee-services {
+	background: url(../img/bg-services.png) 81% 50% no-repeat, linear-gradient(to bottom, $lightseagreen, $skyblue 100%);
+	  scroll-behavior: auto;
+
+	&__flex-container {
+		display: flex;
+		height: 790px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__links-wrapper {
+		display: flex;
+		flex-basis: 50%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__links-list {
+		display: flex;
+		flex-direction: column;
+		width: 100%; max-width: 400px;
+		list-style: none;
+	}
+
+	&__links-item {
+		margin-bottom: 20px;
+		&:last-child { margin-bottom: 0; }
+	}
+
+	&__links-link {
+		display: flex;
+		height: 100px;
+		text-decoration: none;
+		font-size: 0;
+		background-color: rgba(white, .5);
+		border: 1px solid rgba($grey, .5);
+		border-radius: 4px;
+		transition: box-shadow .7s ease;
+		&:hover { background-color: rgba(white, .8); }
+	}
+
+	&__links-title {
+		display: flex;
+		width: 75%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		font: 700 px_to_rem(20px) $font-main;
+		color: $grey;
+		border-right: 1px solid rgba($grey, .5);
+	}
+
+	&__links-icon {
+		display: flex;
+		width: 25%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title-wrapper {
+		display: flex;
+		flex-basis: 50%;
+		justify-content: flex-end;
+		align-items: center;
+		transform: translateY(-50%);
+	}
+
+	&__title { color: white; }
+}

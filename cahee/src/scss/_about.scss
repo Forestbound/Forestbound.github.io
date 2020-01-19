@@ -1,0 +1,30 @@
+.cahee-about {
+	background: $lightseagreen url(../img/bg-about.png) 17% 70% no-repeat;
+	border-top-left-radius: 2%;
+	border-top-right-radius: 2%;
+
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		height: 700px;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	&__flex-wrapper {
+		display: flex;
+		flex-direction: column;
+		width: 100%; max-width: 500px;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		color: white;
+	}
+
+	&__text {
+		margin-bottom: 15px;
+		color: white;
+		&:last-child { margin-bottom: 0; }
+	}
+}

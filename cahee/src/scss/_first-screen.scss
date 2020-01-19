@@ -1,0 +1,93 @@
+.cahee-first-screen {
+	background: url(../img/bg-first-screen.png) center/cover no-repeat;
+	border-bottom-left-radius: 2%;
+	border-bottom-right-radius: 2%;
+	  scroll-behavior: auto;
+
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+	}
+
+	&__top {
+		width: 100%; flex-basis: 147px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo-title {
+		font: px_to_rem(50px) $font-logo;
+		color: $grey;
+		&:hover { color: rgba($grey, .8); }
+	}
+
+	&__nav {
+		list-style: none;
+		display: flex;
+		flex-basis: 570px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav-link {
+		text-decoration: none;
+		position: relative;
+		font: 700 px_to_rem(16px) $font-main;
+		color: $grey;
+		  scroll-behavior: auto;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -24%;
+			width: 0; height: 3px;
+			background-color: $orange;
+			border-radius: 50%;
+			transition: width .4s ease;
+		}
+
+		&:hover::before { width: 100%; }
+	}
+
+	&__info {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__info-title {
+		width: 100%; max-width: 370px;
+		margin-bottom: 15px;
+		font: 700 px_to_rem(60px) $font-main;
+		color: $grey;
+	}
+
+	&__info-text {
+		width: 100%; max-width: 370px;
+		margin-bottom: 30px;
+		color: $grey;
+	}
+
+	&__info-button {
+		background-color: $orange;
+		transition: box-shadow .7s ease;
+		&:hover { box-shadow: 0 5px 20px $orange; }
+	}
+
+	&__scroll {
+		width: 100%; flex-basis: 147px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__scroll-link {
+		text-decoration: none;
+		font-size: 0;
+		transition: transform 1s ease;
+		&:hover { transform: translateY(-10%); }
+	}
+}

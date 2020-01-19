@@ -1,0 +1,57 @@
+.cahee-gallery {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background-image: linear-gradient(to bottom, $skyblue, white 100%);
+
+	&__flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__text-wrapper {
+		width: 100%; max-width: 620px;
+		margin-bottom: 45px;
+		text-align: center;
+	}
+
+	&__text-title {
+		margin-bottom: 15px;
+		color: $grey;
+	}
+
+	&__text-description { color: $grey; }
+	&__images-wrapper { margin-bottom: 45px; }
+
+	&__images-row-one {
+		display: flex;
+		margin-bottom: 30px;
+	}
+
+	&__images-row-one-wrapper {
+		display: inline-flex;
+		flex-direction: column;
+		width: 100%; max-width: 370px; height: 550px;
+		justify-content: space-between;
+	}
+
+	&__images-row-two {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__images-img {
+		object-fit: cover;
+		border-radius: 4px;
+	}
+
+	&__images-img-big {
+		margin-right: 30px;
+		width: 100%; max-width: 770px; height: 550px;
+	}
+
+	&__images-img-average { width: 100%; max-width: 570px; height: 400px; }
+	&__images-img-small { height: 260px; }
+	&__link-more { background-color: $steelblue; }
+}

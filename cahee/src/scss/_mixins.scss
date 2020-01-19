@@ -1,0 +1,12 @@
+@function px_to_rem($target, $context: $base-size) {
+  @if $target == 0 { @return 0 }
+  @return $target / $context + 0rem;
+}
+
+// Responsive
+@mixin media-hidden { @media (max-width: 319.98px) { display: none; } }
+// @mixin xs-screen { @media (max-width: 575.98px) { @content; } }
+// @mixin sm-screen { @media (min-width: 576px) and (max-width: 767.98px) { @content; } }
+// @mixin md-screen { @media (min-width: 768px) and (max-width: 991.98px) { @content; } }
+// @mixin lg-screen { @media (min-width: 992px) and (max-width: 1199.98px) { @content; } }
+// @mixin xl-screen { @media (min-width: 1200px) { @content; } }
