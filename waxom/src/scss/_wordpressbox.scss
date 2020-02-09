@@ -1,0 +1,47 @@
+.waxom-wordpressbox {
+	background-image: linear-gradient(90deg, #211b19 0%, #4e3326 100%);
+
+	& > .container {
+		display: flex;
+		height: 150px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__text {
+
+	}
+
+	&__text-main {
+		margin-bottom: .5rem;
+		color: white;
+		font: 400 px_to_rem(28px) $rale;
+	}
+
+	&__text-secondary {
+		margin-bottom: 0;
+		color: #615855;
+		font: 300 px_to_rem(18px) $mont;
+	}
+
+	&__link {
+		flex-basis: 100%;
+		display: flex;
+		height: 50px;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		font: 800 px_to_rem(14px) $rale;
+		line-height: 23px;
+		border-radius: 3px;
+		background-color: $brown;
+
+		&:hover {
+			color: white;
+			text-decoration: none;
+			background-color: rgba($brown, .9);
+		}
+	}
+}
+
+.light-brown { color: $light-brown; }

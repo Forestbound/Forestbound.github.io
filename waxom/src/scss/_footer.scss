@@ -1,0 +1,241 @@
+.waxom-footer {
+	// padding-top: 80px; padding-bottom: 80px;
+	background-color: $footer-bg;
+
+	& > .container { padding-top: 80px; padding-bottom: 80px; }
+
+	&__about {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__about-logo {
+		align-self: flex-start;
+		margin-bottom: 1rem;
+	}
+
+	&__about-text {
+		margin-bottom: 1rem;
+		color: $grey;
+		font: 300 px_to_rem(14px) $mont;
+		line-height: 24px;
+	}
+
+	&__about-more {
+		align-self: flex-start;
+		position: relative;
+		text-decoration: none;
+		color: white;
+		font: 400 px_to_rem(14px) $mont;
+		&:hover { color: rgba(white, .8); }
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%; right: -15px;
+			transform: translateY(-35%);
+			border: 4px solid rgba(white, 0);
+			border-radius: 2px;
+			border-left-color: rgba(white, 1);
+			transition: right .3s ease;
+		}
+
+		&:hover::after {
+			border-left-color: rgba(white, .8);
+			right: -17px;
+		}
+	}
+
+	&__posts {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__posts-title {
+		align-self: flex-start;
+		margin-top: .7rem;
+		margin-bottom: 1rem;
+		color: white;
+		font: 600 px_to_rem(24px) $rale;
+	}
+
+	&__posts-list {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+	}
+
+	&__posts-item {
+		margin-bottom: 1rem; padding-bottom: 1rem;
+		border-bottom: 1px solid $extra-dark-grey;
+
+		&:last-child {
+			margin-bottom: 0; padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	&__posts-link {
+		display: inline-block;
+		text-decoration: none;
+		font-size: 0;
+
+		&:hover > .waxom-footer__posts-date { color: white; }
+		&:hover > .waxom-footer__posts-text { color: $light-brown; }
+	}
+
+	&__posts-date {
+		display: inline-block;
+		margin-bottom: .5rem;
+		color: $dark-grey;
+		font: 300 px_to_rem(12px) $mont;
+	}
+
+	&__posts-text {
+		color: $grey;
+		font: 300 px_to_rem(14px) $mont;
+	}
+
+	&__twitter {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__twitter-title {
+		align-self: flex-start;
+		margin-top: .7rem;
+		margin-bottom: 1rem;
+		color: white;
+		font: 600 px_to_rem(24px) $rale;
+	}
+
+	&__twitter-list {
+		display: flex;
+		flex-direction: column;
+		list-style: none;
+	}
+
+	&__twitter-item {
+		margin-bottom: 1rem; padding-bottom: 1rem;
+		border-bottom: 1px solid $extra-dark-grey;
+
+		&:last-child {
+			margin-bottom: 0; padding-bottom: 0;
+			border-bottom: none;
+		}
+	}
+
+	&__twitter-text {
+		margin-bottom: .5rem;
+		color: $grey;
+		font: 300 px_to_rem(14px) $mont;
+	}
+
+	&__twitter-link {
+		text-decoration: none;
+		color: $blue;
+		&:hover { color: rgba($blue, .8); }
+	}
+
+	&__twitter-ago {
+		color: $dark-grey;
+		font: 300 px_to_rem(12px) $mont;
+	}
+
+	&__dribbble {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__dribbble .row {
+		margin-bottom: .6rem;
+		justify-content: space-between;
+		&:last-child { margin-bottom: 0; }
+	}
+
+	&__dribbble-title {
+		align-self: flex-start;
+		margin-top: .7rem;
+		margin-bottom: 1rem;
+		color: white;
+		font: 600 px_to_rem(24px) $rale;
+	}
+
+	&__dribbble-link {
+		flex-basis: 48%;
+		text-decoration: none;
+		font-size: 0;
+		transition: transform .5s ease;
+		&:hover { transform: translateY(-.1rem); }
+	}
+
+	&__dribbble-img {
+		width: 100%; height: 98px;
+		object-fit: cover;
+	}
+
+	&__copyright {
+		padding-top: 50px; padding-bottom: 50px;
+		background-color: $copyright-bg;
+	}
+
+	&__copyright > .container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__copyright-main-list {
+		display: flex;
+		list-style: none;
+	}
+
+	&__copyright-main-item {
+		padding-left: 10px; padding-right: 10px;
+		border-right: 1px solid $extra-dark-grey;
+		&:first-child { padding-left: 0; }
+
+		&:last-child {
+			padding-right: 0;
+			border-right: none;
+		}
+	}
+
+	&__copyright-main-text {
+		color: $grey;
+		font: 300 px_to_rem(13px) $mont;
+	}
+
+	&__copyright-main-link {
+		text-decoration: none;
+		color: $light-grey;
+		font: 300 px_to_rem(13px) $mont;
+		&:hover { color: $light-brown; }
+	}
+
+	&__copyright-secondary-list {
+		display: flex;
+		list-style: none;
+	}
+
+	&__copyright-secondary-item {
+		padding-left: 10px; padding-right: 10px;
+		border-right: 1px solid $extra-dark-grey;
+		&:first-child { padding-left: 0; }
+
+		&:last-child {
+			padding-right: 0;
+			border-right: none;
+		}
+	}
+
+	&__copyright-secondary-text {
+		color: $grey;
+		font: 300 px_to_rem(13px) $mont;
+	}
+
+	&__copyright-secondary-link {
+		text-decoration: none;
+		color: $light-grey;
+		&:hover { color: $light-brown; }
+	}
+}

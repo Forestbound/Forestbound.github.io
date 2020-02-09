@@ -1,0 +1,44 @@
+.waxom-services {
+	height: 373px;
+	// background-color:red;
+
+	&__list {
+		display: flex;
+		height: 100%;
+		margin-bottom: 0;
+		align-items: center;
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+		text-align: center;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 110%; left: 50%;
+			transform: translateX(-50%);
+			width: 70px; height: 3px;
+			background-color: #f1eee9;
+		}
+	}
+
+	&__item-icon {
+		margin-bottom: 1rem;
+		width: 48px; height: 48px;
+	}
+
+	&__item-title {
+		margin-bottom: 1rem;
+		color: $grey;
+		font: 600 px_to_rem(22px) $rale;
+	}
+
+	&__item-text {
+		margin-bottom: 0;
+		color: $grey;
+		font: 300 px_to_rem(14px) $mont;
+		line-height: 24px;
+	}
+}

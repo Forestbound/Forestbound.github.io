@@ -1,0 +1,20 @@
+.waxom-projects {
+	display: flex;
+	flex-direction: column;
+	padding: 80px 0;
+	justify-content: center;
+	align-items: center;
+
+	&__textwrapper {
+		color: $grey;
+		text-align: center;
+	}
+
+	&__textwrapper-title {
+		font: 600 px_to_rem(30px) $rale;
+	}
+
+	&__textwrapper-text {
+
+	}
+}

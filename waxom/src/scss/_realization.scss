@@ -1,0 +1,42 @@
+.waxom-realization {
+	height: 700px;
+	background-color: $extra-light-grey;
+
+	& > .container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__title {
+		margin-bottom: 1rem;
+		color: $grey;
+		font: 600 px_to_rem(30px) $rale;
+		transform: translateY(-45px);
+	}
+
+	&__text {
+		margin-bottom: 0;
+		width: 770px;
+		color: $grey;
+		font: 300 px_to_rem(16px) $mont;
+		line-height: 28px;
+		transform: translateY(-45px);
+	}
+
+	&__img-center { margin-bottom: -112px; z-index: 20;}
+
+	&__img-left {
+		position: absolute;
+		bottom: 0; left: -50px;
+	}
+
+	&__img-right {
+		position: absolute;
+		bottom: 0; right: -50px;
+	}
+}

@@ -1,0 +1,105 @@
+.waxom-first-screen {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to bottom, rgba($extra-dark-grey, .7), rgba($extra-dark-grey, .7)), url(../img/first-screen-bg.jpg) 0 0 / cover no-repeat;
+
+	&__navigation {
+		position: fixed;
+		top: 0; left: 0; right: 0;
+		background-color: rgba($extra-dark-grey, .3);
+		backdrop-filter: blur(6rem);
+		z-index: 10;
+	}
+
+	&__navigation-flex-container {
+		display: flex;
+		height: 6rem;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__navigation-menu {
+		display: inline-flex;
+		list-style: none;
+	}
+
+	&__navigation-item {
+		margin-right: 1.5rem;
+		&:last-child { margin-right: 0; }
+	}
+
+	&__navigation-link {
+		text-decoration: none;
+		color: white;
+		font: 300 px_to_rem(14px) $mont;
+		&:hover { color: $light-brown; }
+	}
+
+	&__navigation-menu-icons {
+		display: inline-flex;
+		list-style: none;
+	}
+
+	&__navigation-item-icon {
+		margin-right: 1.5rem;
+		&:last-child { margin-right: 0; }
+	}
+
+	&__navigation-icon {
+		font-size: 0;
+		&:hover .shp0 { fill: $light-brown; }
+	}
+
+	&__slider {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__slider-slogan {
+		margin-bottom: 3rem;
+		width: 600px;
+		text-align: center;
+		color: white;
+	}
+
+	&__slider-slogan-overhead {
+		margin-bottom: .5rem;
+		font: 500 px_to_rem(36px) $rale;
+	}
+
+	&__slider-slogan-header {
+		margin-bottom: .5rem;
+		font: 800 px_to_rem(52px) $rale;
+	}
+
+	&__slider-slogan-text {
+		font: 300 px_to_rem(16px) $mont;
+		line-height: 24px;
+	}
+
+	&__slider-button {
+		flex-basis: 53px;
+		display: flex;
+		width: 170px;
+		justify-content: center;
+		align-items: center;
+		text-decoration: none;
+		color: white;
+		font: 800 px_to_rem(14px) $rale;
+		border-radius: 3px;
+		background-color: $brown;
+
+		&:hover {
+			color: white;
+			background-color: rgba($brown, .9);
+		}
+	}
+}
+
+.owl-carousel { display: flex; }

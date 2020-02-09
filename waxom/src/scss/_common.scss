@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html, body { min-height: 100vh; }
+
+body {
+	font-size: 100%;
+	@include media-hidden;
+}
+
+.t-caps {text-transform: capitalize;}
+.t-upper {text-transform: uppercase;}
+
+.logotitle { // Logo & Title
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	color: white;
+	font-size: 0;
+	&:hover { color: rgba(white, .8); }
+	&:hover .shp0 { fill: rgba(white, .8); }
+	&__heading { font: 400 px_to_rem(34px) $rale; }
+}
+
+#map { // Google Maps API section
+	width: 100%; height: 490px;
+	background-color: $grey;
+}
+
+.light-grey { // Only for link in <footer>
+	color: $light-grey !important;
+	&:hover { color: rgba($light-grey, .8) !important; }
+}
+
+.envato { // Only for link in copyright
+	color: $green !important;
+	&:hover { color: rgba($green, .8) !important; }
+}
